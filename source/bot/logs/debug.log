@@ -1,0 +1,168 @@
+2023-12-14T11:56:53.322595+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T11:58:46.337021+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:00:14.469597+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:08:49.239836+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:08:57.895168+0300 ERROR An error has been caught in function 'notify', process 'MainProcess' (12416), thread 'MainThread' (21696):
+[33m[1mTraceback (most recent call last):[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\[0m[32m[1mmain.py[0m", line [33m33[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\[0m[32m[1mmain.py[0m", line [33m25[0m, in [35mmain[0m
+    [1mexecutor[0m[35m[1m.[0m[1mstart_polling[0m[1m([0m[1mdp[0m[1m,[0m [1mon_startup[0m[35m[1m=[0m[1mon_startup[0m[1m,[0m [1mskip_updates[0m[35m[1m=[0m[36m[1mTrue[0m[1m,[0m [1mrelax[0m[35m[1m=[0m[36m[1mNone[0m[1m,[0m [1mtimeout[0m[35m[1m=[0m[34m[1m10[0m[1m,[0m [1mfast[0m[35m[1m=[0m[36m[1mTrue[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\utils\[0m[32m[1mexecutor.py[0m", line [33m45[0m, in [35mstart_polling[0m
+    [1mexecutor[0m[35m[1m.[0m[1mstart_polling[0m[1m([0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\utils\[0m[32m[1mexecutor.py[0m", line [33m323[0m, in [35mstart_polling[0m
+    [1mloop[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mwindows_events.py[0m", line [33m321[0m, in [35mrun_forever[0m
+    [1msuper[0m[1m([0m[1m)[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m601[0m, in [35mrun_forever[0m
+    [1mself[0m[35m[1m.[0m[1m_run_once[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m1905[0m, in [35m_run_once[0m
+    [1mhandle[0m[35m[1m.[0m[1m_run[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mevents.py[0m", line [33m80[0m, in [35m_run[0m
+    [1mself[0m[35m[1m.[0m[1m_context[0m[35m[1m.[0m[1mrun[0m[1m([0m[1mself[0m[35m[1m.[0m[1m_callback[0m[1m,[0m [35m[1m*[0m[1mself[0m[35m[1m.[0m[1m_args[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mhandler.py[0m", line [33m117[0m, in [35mnotify[0m
+    [1mresponse[0m [35m[1m=[0m [35m[1mawait[0m [1mhandler_obj[0m[35m[1m.[0m[1mhandler[0m[1m([0m[35m[1m*[0m[1margs[0m[1m,[0m [35m[1m**[0m[1mpartial_data[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mdispatcher.py[0m", line [33m256[0m, in [35mprocess_update[0m
+    [35m[1mreturn[0m [35m[1mawait[0m [1mself[0m[35m[1m.[0m[1mmessage_handlers[0m[35m[1m.[0m[1mnotify[0m[1m([0m[1mupdate[0m[35m[1m.[0m[1mmessage[0m[1m)[0m
+> File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mhandler.py[0m", line [33m117[0m, in [35mnotify[0m
+    [1mresponse[0m [35m[1m=[0m [35m[1mawait[0m [1mhandler_obj[0m[35m[1m.[0m[1mhandler[0m[1m([0m[35m[1m*[0m[1margs[0m[1m,[0m [35m[1m**[0m[1mpartial_data[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\handlers\other\[0m[32m[1mauthentication.py[0m", line [33m33[0m, in [35mcmd_auth[0m
+    [35m[1mawait[0m [1mmessage[0m[35m[1m.[0m[1manswer[0m[1m([0m[36m'Вы ввели неверный e-mail вдрес!\n'[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\types\[0m[32m[1mmessage.py[0m", line [33m430[0m, in [35manswer[0m
+    [35m[1mreturn[0m [35m[1mawait[0m [1mself[0m[35m[1m.[0m[1mbot[0m[35m[1m.[0m[1msend_message[0m[1m([0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\bot\[0m[32m[1mbot.py[0m", line [33m346[0m, in [35msend_message[0m
+    [1mresult[0m [35m[1m=[0m [35m[1mawait[0m [1mself[0m[35m[1m.[0m[1mrequest[0m[1m([0m[1mapi[0m[35m[1m.[0m[1mMethods[0m[35m[1m.[0m[1mSEND_MESSAGE[0m[1m,[0m [1mpayload[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\bot\[0m[32m[1mbase.py[0m", line [33m236[0m, in [35mrequest[0m
+    [35m[1mreturn[0m [35m[1mawait[0m [1mapi[0m[35m[1m.[0m[1mmake_request[0m[1m([0m[35m[1mawait[0m [1mself[0m[35m[1m.[0m[1mget_session[0m[1m([0m[1m)[0m[1m,[0m [1mself[0m[35m[1m.[0m[1mserver[0m[1m,[0m [1mself[0m[35m[1m.[0m[1m__token[0m[1m,[0m [1mmethod[0m[1m,[0m [1mdata[0m[1m,[0m [1mfiles[0m[1m,[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\bot\[0m[32m[1mapi.py[0m", line [33m140[0m, in [35mmake_request[0m
+    [35m[1mreturn[0m [1mcheck_result[0m[1m([0m[1mmethod[0m[1m,[0m [1mresponse[0m[35m[1m.[0m[1mcontent_type[0m[1m,[0m [1mresponse[0m[35m[1m.[0m[1mstatus[0m[1m,[0m [35m[1mawait[0m [1mresponse[0m[35m[1m.[0m[1mtext[0m[1m([0m[1m)[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\bot\[0m[32m[1mapi.py[0m", line [33m115[0m, in [35mcheck_result[0m
+    [1mexceptions[0m[35m[1m.[0m[1mBadRequest[0m[35m[1m.[0m[1mdetect[0m[1m([0m[1mdescription[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\utils\[0m[32m[1mexceptions.py[0m", line [33m140[0m, in [35mdetect[0m
+    [35m[1mraise[0m [1merr[0m[1m([0m[1mcls[0m[35m[1m.[0m[1mtext[0m [35m[1mor[0m [1mdescription[0m[1m)[0m
+[31m[1maiogram.utils.exceptions.CantParseEntities[0m:[1m Can't parse entities: unsupported start tag "ваша" at byte offset 187[0m
+2023-12-14T12:09:40.164663+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:10:33.511516+0300 ERROR An error has been caught in function 'notify', process 'MainProcess' (15468), thread 'MainThread' (6788):
+[33m[1mTraceback (most recent call last):[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\[0m[32m[1mmain.py[0m", line [33m33[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\[0m[32m[1mmain.py[0m", line [33m25[0m, in [35mmain[0m
+    [1mexecutor[0m[35m[1m.[0m[1mstart_polling[0m[1m([0m[1mdp[0m[1m,[0m [1mon_startup[0m[35m[1m=[0m[1mon_startup[0m[1m,[0m [1mskip_updates[0m[35m[1m=[0m[36m[1mTrue[0m[1m,[0m [1mrelax[0m[35m[1m=[0m[36m[1mNone[0m[1m,[0m [1mtimeout[0m[35m[1m=[0m[34m[1m10[0m[1m,[0m [1mfast[0m[35m[1m=[0m[36m[1mTrue[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\utils\[0m[32m[1mexecutor.py[0m", line [33m45[0m, in [35mstart_polling[0m
+    [1mexecutor[0m[35m[1m.[0m[1mstart_polling[0m[1m([0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\utils\[0m[32m[1mexecutor.py[0m", line [33m323[0m, in [35mstart_polling[0m
+    [1mloop[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mwindows_events.py[0m", line [33m321[0m, in [35mrun_forever[0m
+    [1msuper[0m[1m([0m[1m)[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m601[0m, in [35mrun_forever[0m
+    [1mself[0m[35m[1m.[0m[1m_run_once[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m1905[0m, in [35m_run_once[0m
+    [1mhandle[0m[35m[1m.[0m[1m_run[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mevents.py[0m", line [33m80[0m, in [35m_run[0m
+    [1mself[0m[35m[1m.[0m[1m_context[0m[35m[1m.[0m[1mrun[0m[1m([0m[1mself[0m[35m[1m.[0m[1m_callback[0m[1m,[0m [35m[1m*[0m[1mself[0m[35m[1m.[0m[1m_args[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mhandler.py[0m", line [33m117[0m, in [35mnotify[0m
+    [1mresponse[0m [35m[1m=[0m [35m[1mawait[0m [1mhandler_obj[0m[35m[1m.[0m[1mhandler[0m[1m([0m[35m[1m*[0m[1margs[0m[1m,[0m [35m[1m**[0m[1mpartial_data[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mdispatcher.py[0m", line [33m256[0m, in [35mprocess_update[0m
+    [35m[1mreturn[0m [35m[1mawait[0m [1mself[0m[35m[1m.[0m[1mmessage_handlers[0m[35m[1m.[0m[1mnotify[0m[1m([0m[1mupdate[0m[35m[1m.[0m[1mmessage[0m[1m)[0m
+> File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mhandler.py[0m", line [33m117[0m, in [35mnotify[0m
+    [1mresponse[0m [35m[1m=[0m [35m[1mawait[0m [1mhandler_obj[0m[35m[1m.[0m[1mhandler[0m[1m([0m[35m[1m*[0m[1margs[0m[1m,[0m [35m[1m**[0m[1mpartial_data[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\handlers\other\[0m[32m[1mauthentication.py[0m", line [33m28[0m, in [35mcmd_auth[0m
+    [1mprint[0m[1m([0m[1muser_text_list[0m[1m[[0m[34m[1m1[0m[1m][0m[1m)[0m
+[31m[1mIndexError[0m:[1m list index out of range[0m
+2023-12-14T12:11:08.021325+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:11:28.678430+0300 ERROR An error has been caught in function 'notify', process 'MainProcess' (15972), thread 'MainThread' (11300):
+[33m[1mTraceback (most recent call last):[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\[0m[32m[1mmain.py[0m", line [33m33[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\[0m[32m[1mmain.py[0m", line [33m25[0m, in [35mmain[0m
+    [1mexecutor[0m[35m[1m.[0m[1mstart_polling[0m[1m([0m[1mdp[0m[1m,[0m [1mon_startup[0m[35m[1m=[0m[1mon_startup[0m[1m,[0m [1mskip_updates[0m[35m[1m=[0m[36m[1mTrue[0m[1m,[0m [1mrelax[0m[35m[1m=[0m[36m[1mNone[0m[1m,[0m [1mtimeout[0m[35m[1m=[0m[34m[1m10[0m[1m,[0m [1mfast[0m[35m[1m=[0m[36m[1mTrue[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\utils\[0m[32m[1mexecutor.py[0m", line [33m45[0m, in [35mstart_polling[0m
+    [1mexecutor[0m[35m[1m.[0m[1mstart_polling[0m[1m([0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\utils\[0m[32m[1mexecutor.py[0m", line [33m323[0m, in [35mstart_polling[0m
+    [1mloop[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mwindows_events.py[0m", line [33m321[0m, in [35mrun_forever[0m
+    [1msuper[0m[1m([0m[1m)[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m601[0m, in [35mrun_forever[0m
+    [1mself[0m[35m[1m.[0m[1m_run_once[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m1905[0m, in [35m_run_once[0m
+    [1mhandle[0m[35m[1m.[0m[1m_run[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mevents.py[0m", line [33m80[0m, in [35m_run[0m
+    [1mself[0m[35m[1m.[0m[1m_context[0m[35m[1m.[0m[1mrun[0m[1m([0m[1mself[0m[35m[1m.[0m[1m_callback[0m[1m,[0m [35m[1m*[0m[1mself[0m[35m[1m.[0m[1m_args[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mhandler.py[0m", line [33m117[0m, in [35mnotify[0m
+    [1mresponse[0m [35m[1m=[0m [35m[1mawait[0m [1mhandler_obj[0m[35m[1m.[0m[1mhandler[0m[1m([0m[35m[1m*[0m[1margs[0m[1m,[0m [35m[1m**[0m[1mpartial_data[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mdispatcher.py[0m", line [33m256[0m, in [35mprocess_update[0m
+    [35m[1mreturn[0m [35m[1mawait[0m [1mself[0m[35m[1m.[0m[1mmessage_handlers[0m[35m[1m.[0m[1mnotify[0m[1m([0m[1mupdate[0m[35m[1m.[0m[1mmessage[0m[1m)[0m
+> File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mhandler.py[0m", line [33m117[0m, in [35mnotify[0m
+    [1mresponse[0m [35m[1m=[0m [35m[1mawait[0m [1mhandler_obj[0m[35m[1m.[0m[1mhandler[0m[1m([0m[35m[1m*[0m[1margs[0m[1m,[0m [35m[1m**[0m[1mpartial_data[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\handlers\other\[0m[32m[1mauthentication.py[0m", line [33m28[0m, in [35mcmd_auth[0m
+    [1mprint[0m[1m([0m[1muser_text_list[0m[1m[[0m[34m[1m1[0m[1m][0m[1m)[0m
+[31m[1mIndexError[0m:[1m list index out of range[0m
+2023-12-14T12:11:34.959278+0300 ERROR An error has been caught in function 'notify', process 'MainProcess' (15972), thread 'MainThread' (11300):
+[33m[1mTraceback (most recent call last):[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\[0m[32m[1mmain.py[0m", line [33m33[0m, in [35m<module>[0m
+    [1mmain[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\[0m[32m[1mmain.py[0m", line [33m25[0m, in [35mmain[0m
+    [1mexecutor[0m[35m[1m.[0m[1mstart_polling[0m[1m([0m[1mdp[0m[1m,[0m [1mon_startup[0m[35m[1m=[0m[1mon_startup[0m[1m,[0m [1mskip_updates[0m[35m[1m=[0m[36m[1mTrue[0m[1m,[0m [1mrelax[0m[35m[1m=[0m[36m[1mNone[0m[1m,[0m [1mtimeout[0m[35m[1m=[0m[34m[1m10[0m[1m,[0m [1mfast[0m[35m[1m=[0m[36m[1mTrue[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\utils\[0m[32m[1mexecutor.py[0m", line [33m45[0m, in [35mstart_polling[0m
+    [1mexecutor[0m[35m[1m.[0m[1mstart_polling[0m[1m([0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\utils\[0m[32m[1mexecutor.py[0m", line [33m323[0m, in [35mstart_polling[0m
+    [1mloop[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mwindows_events.py[0m", line [33m321[0m, in [35mrun_forever[0m
+    [1msuper[0m[1m([0m[1m)[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m601[0m, in [35mrun_forever[0m
+    [1mself[0m[35m[1m.[0m[1m_run_once[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m1905[0m, in [35m_run_once[0m
+    [1mhandle[0m[35m[1m.[0m[1m_run[0m[1m([0m[1m)[0m
+  File "[32mC:\Users\akulo\AppData\Local\Programs\Python\Python39\lib\asyncio\[0m[32m[1mevents.py[0m", line [33m80[0m, in [35m_run[0m
+    [1mself[0m[35m[1m.[0m[1m_context[0m[35m[1m.[0m[1mrun[0m[1m([0m[1mself[0m[35m[1m.[0m[1m_callback[0m[1m,[0m [35m[1m*[0m[1mself[0m[35m[1m.[0m[1m_args[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mhandler.py[0m", line [33m117[0m, in [35mnotify[0m
+    [1mresponse[0m [35m[1m=[0m [35m[1mawait[0m [1mhandler_obj[0m[35m[1m.[0m[1mhandler[0m[1m([0m[35m[1m*[0m[1margs[0m[1m,[0m [35m[1m**[0m[1mpartial_data[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mdispatcher.py[0m", line [33m256[0m, in [35mprocess_update[0m
+    [35m[1mreturn[0m [35m[1mawait[0m [1mself[0m[35m[1m.[0m[1mmessage_handlers[0m[35m[1m.[0m[1mnotify[0m[1m([0m[1mupdate[0m[35m[1m.[0m[1mmessage[0m[1m)[0m
+> File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\venv\lib\site-packages\aiogram\dispatcher\[0m[32m[1mhandler.py[0m", line [33m117[0m, in [35mnotify[0m
+    [1mresponse[0m [35m[1m=[0m [35m[1mawait[0m [1mhandler_obj[0m[35m[1m.[0m[1mhandler[0m[1m([0m[35m[1m*[0m[1margs[0m[1m,[0m [35m[1m**[0m[1mpartial_data[0m[1m)[0m
+  File "[32mC:\Users\akulo\PycharmProjects\mirea_dormitory\bot\handlers\other\[0m[32m[1mauthentication.py[0m", line [33m28[0m, in [35mcmd_auth[0m
+    [1mprint[0m[1m([0m[1muser_text_list[0m[1m[[0m[34m[1m1[0m[1m][0m[1m)[0m
+[31m[1mIndexError[0m:[1m list index out of range[0m
+2023-12-14T12:11:49.966581+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:12:49.308644+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:37:37.839929+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:40:20.647588+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:50:05.004758+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
+2023-12-14T12:51:39.104497+0300 SUCCESS 
+
+SUCCES Общага МИРЭА launched successfully.
+
