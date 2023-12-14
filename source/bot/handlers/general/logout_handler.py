@@ -1,27 +1,12 @@
-import time
-
 from aiogram import types
 from loguru import logger
 
 import messages as msg
 from config import (
-    waiting_time,
-    email_login,
-    email_pass,
-    send_code_delay,
-    code_expiration_time,
-    max_attempts_code
+    waiting_time
 )
 from database.connect import cursor_users, db_users
-from loader import bot
-from modules.num_formating import numerize
 from utils.antiflood import rate_limit
-import re
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from utils.encrypter import generate_and_encrypt_code
-import time
 
 
 @logger.catch()
@@ -36,4 +21,3 @@ async def cmd_logout(message: types.Message):
     except Exception as err:
         logger.error(f'{err}')
         return
-
