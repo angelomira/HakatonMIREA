@@ -9,7 +9,8 @@ from config import (
     email_login,
     email_pass,
     send_code_delay,
-    code_expiration_time
+    code_expiration_time,
+    max_attempts_code
 )
 from database.connect import cursor_users, db_users
 from loader import bot
@@ -75,6 +76,7 @@ async def cmd_auth(message: types.Message):
     cursor_users.execute('SELECT logged_in FROM logged WHERE user_id = %s', (user_id,))
     logged_in = cursor_users.fetchone()
     if logged_in is not None:
+        logged_in = logged_in[0]
         if logged_in:
             await message.answer(text=msg.auth_already_logged_in_msg)
             return
@@ -92,6 +94,25 @@ async def cmd_auth(message: types.Message):
         if logged_in:
             await message.answer(text=msg.auth_already_logged_in_email_msg)
             return
+
+    cursor_users.execute('SELECT expiration FROM tempblocked WHERE user_id = %s', (user_id,))
+    expiration_time = cursor_users.fetchone()
+    if expiration_time is not None:
+        expiration_time = expiration_time[0]
+        current_time = time.time()
+
+        if current_time < expiration_time:
+            await message.answer(text=msg.auth_wrong_code_tempblock_msg)
+            return
+        else:
+            try:
+                cursor_users.execute('DELETE FROM tempblocked WHERE user_id = %s', (user_id,))
+                cursor_users.execute('DELETE FROM auth WHERE user_id = %s', (user_id,))
+                db_users.commit()
+            except Exception as err:
+                logger.critical(err)
+                db_users.rollback()
+                return
 
     cursor_users.execute('SELECT MAX(expiration) FROM auth WHERE user_id = %s', (user_id,))
     code_latest_expiration_time = cursor_users.fetchone()[0]
@@ -111,9 +132,17 @@ async def cmd_auth(message: types.Message):
     print(email_code, encrypted_email_code)
 
     try:
-        cursor_users.execute('INSERT INTO auth VALUES(%s, %s, %s, %s)',
-                             (user_id, encrypted_email_code, user_input_email, current_time + code_expiration_time))
+        cursor_users.execute('SELECT attempts FROM auth WHERE user_id = %s', (user_id,))
+        total_attempts = cursor_users.fetchone()
+        if total_attempts is None:
+            total_attempts = max_attempts_code
+        else:
+            total_attempts = total_attempts[0]
+
+        cursor_users.execute('INSERT INTO auth VALUES(%s, %s, %s, %s, %s)',
+                             (user_id, encrypted_email_code, user_input_email, current_time + code_expiration_time, total_attempts))
         db_users.commit()
+
     except Exception as err:
         logger.error(err)
         db_users.rollback()

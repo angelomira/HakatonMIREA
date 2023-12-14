@@ -3,8 +3,11 @@ from loguru import logger
 
 from config import bot_name
 from database.create_tables import create_tables
-from handlers.general.authentication import cmd_auth
 from handlers.general.start_handler import cmd_start
+from handlers.general.authentication import cmd_auth
+from handlers.general.logout_handler import cmd_logout
+from handlers.admins.search_handler import cmd_search
+
 from handlers.general.message_handler import message_handler_fun
 
 
@@ -33,4 +36,7 @@ async def register_handlers(dp: Dispatcher):
     # Main commands
     dp.register_message_handler(cmd_start, commands=['start'])
     dp.register_message_handler(cmd_auth, commands=['auth'])
+    dp.register_message_handler(cmd_logout, commands=['exit'])
+    dp.register_message_handler(cmd_search, commands=['search'])
+
     dp.register_message_handler(message_handler_fun)

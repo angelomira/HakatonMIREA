@@ -65,10 +65,10 @@ class ThrottlingMiddleware(BaseMiddleware):
             print(f'{user_id} banned')
 
         cursor_users.execute('SELECT expiration, logged_in FROM logged WHERE user_id = %s', (user_id,))
-        user_info = cursor_users.fetchall()
-        if len(user_info) != 0:
-            expiration_time = user_info[0][0]
-            logged_in = user_info[0][1]
+        user_info = cursor_users.fetchone()
+        if user_info is not None:
+            expiration_time = user_info[0]
+            logged_in = user_info[1]
             current_time = time.time()
 
             if (current_time > expiration_time) and logged_in:
@@ -81,6 +81,10 @@ class ThrottlingMiddleware(BaseMiddleware):
                     return
                 finally:
                     raise CancelHandler()
+
+        else:
+            await message.answer(text=msg.auth_need_msg)
+            raise CancelHandler()
 
         handler = current_handler.get()
 
