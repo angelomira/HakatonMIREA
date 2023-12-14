@@ -8,21 +8,8 @@ token = "6667439064:AAEfC6avvhwLqzLi6bc2UG_q50cqlS9WVIQ"  # Bot Token @BotFather
 email_login = 'mireadormitorybot@mail.ru'
 email_pass = 'FH2gKTWJ03wwfcbTCPAX'
 
-# Подключение по вебхуку (отключено)
-# WEBHOOK_HOST = '65.108.32.53'  # Домен, на который Телеграм будет отправлять обновления
-# WEBHOOK_PORT = 8443
-# WEBHOOK_PATH = '/bot'  # Путь на сервере, по которому будут приходить обновления
-# WEBHOOK_URL = f"https://{WEBHOOK_HOST}:{WEBHOOK_PORT}{WEBHOOK_PATH}"
-#
-#
-# WEBAPP_HOST = 'localhost'
-# WEBAPP_PORT = 8443
-#
-# WEBHOOK_SSL_CERT = "/home/mine_evo_test/webhook.pem"
-# WEBHOOK_SSL_PRIV = "/home/mine_evo_test/webhook.key"
-
 owner_id = 435918797  # Айди владельца бота
-admin_id_list = (435918797, 1041161677, 1153403818, 5555473380)  # Айди админов бота
+admin_id_list = (435918797,)  # Айди админов бота
 bot_name = "Общага МИРЭА"  # Никнейм бота
 bot_username = "mirea_dormitory_bot"  # Юзернейм бота
 bot_id = 6667439064  # id бота
